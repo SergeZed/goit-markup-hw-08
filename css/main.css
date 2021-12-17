@@ -1,0 +1,37 @@
+/* Основной цвет заголовков: #212121; */
+/* Цвет текста основной #757575 */
+/* Цвет акцента: #2196F3  */
+/* Белый цвет: #FFFFFF */
+/* Цвет ссылок в футере: rgba(255, 255, 255, 0.6) */
+/* Цвет фона хедера: #FFFFFF */
+/* Цвет фона блока 1: #E5E5E5 */
+/* Цвет фона блока 2: #F5F4FA */
+/* Цвет фона футера: #2F303A; */
+
+/* hero & hero title */
+
+.hero-title {
+  color: var(--white-color);
+}
+.button {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+/* section & section title */
+
+.section-title {
+  color: var(--title-head-color);
+}
+
+/* features */
+.features .title {
+  color: var(--title-head-color);
+}
+
+/* professions */
+
+/* team */
+
+.team-members p {
+}

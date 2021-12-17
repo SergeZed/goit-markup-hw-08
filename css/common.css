@@ -1,0 +1,73 @@
+:root {
+  --primary-text-color: #757575;
+  --title-head-color: #212121;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --foter-bcg-color: #2f303a;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+  color: var(--title-head-color);
+}
+
+.list {
+  list-style: none;
+}
+
+p {
+  color: var(--primary-text-color);
+}
+
+/* header & logo */
+
+.page-header {
+  background-color: var(--white-color);
+}
+
+.logo {
+  color: var(--title-head-color);
+}
+
+.logo-part {
+  color: var(--accent-color);
+}
+
+/* site nav */
+
+.site-nav .nav-link {
+  color: var(--title-head-color);
+}
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+  color: var(--accent-color);
+}
+.site-nav .nav-link.current {
+  color: var(--accent-color);
+}
+
+/* head contacts */
+
+.head-contacts .head-contact {
+  color: var(--primary-text-color);
+}
+.head-contacts .head-contact:hover,
+.head-contacts .head-contact:focus {
+  color: var(--accent-color);
+}
+
+/* footer */
+
+.page-footer {
+  background-color: var(--foter-bcg-color);
+}
+.logo-footer {
+  color: var(--white-color);
+}
+.page-footer .footer-contact {
+  color: var(--footer-contacts-color);
+}
+
+.page-footer .footer-contact.address {
+  color: var(--white-color);
+}
