@@ -1,3 +1,45 @@
-body {
-  background-color: tomato;
+/* hero */
+
+/* filter section */
+
+.filter {
+  color: var(--title-head-color);
+  background-color: var(--secondary-bcg-color);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+}
+
+.filters .current {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+.filter:hover,
+.filter:focus {
+  color: var(--white-color);
+  background-color: var(--accent-color);
+}
+
+/* projects */
+
+.project-example {
+  text-decoration: none;
+}
+
+.project-title {
+  color: var(--title-head-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
 }
