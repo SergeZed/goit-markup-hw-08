@@ -13,9 +13,10 @@
 
 body {
   color: var(--title-head-color);
-  background-color: var(--primary-bcg-color);
+  background-color: var(--white-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+  font-size: 14px;
 }
 
 .list {
@@ -51,7 +52,6 @@ p {
   color: var(--title-head-color);
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -69,7 +69,6 @@ p {
 .head-contacts .head-contact {
   color: var(--primary-text-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -125,14 +124,12 @@ p {
 .features .title {
   color: var(--title-head-color);
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 
 .features p {
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
 }
 
@@ -169,10 +166,10 @@ p {
   cursor: pointer;
 }
 
-.filters .current {
+/* .filters .current {
   color: var(--white-color);
   background-color: var(--accent-color);
-}
+} */
 
 .filter:hover,
 .filter:focus {
@@ -215,7 +212,6 @@ p {
 }
 .page-footer .footer-contact {
   color: var(--footer-contacts-color);
-  font-size: 14px;
   font-style: normal;
   line-height: 1.71;
   text-decoration: none;
