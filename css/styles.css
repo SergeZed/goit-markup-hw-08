@@ -10,6 +10,7 @@
   --main-hero-bcg-color: #2f303a;
   --button-focus-color: #0362af;
   --header-line-color: #ececec;
+  --bottom-block-color: #eeeeee;
 }
 
 body {
@@ -385,12 +386,26 @@ p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 
 .project-type {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.bottom-part {
+  margin-top: -5px;
+  padding: 20px 24px 20px 24px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--bottom-block-color);
+  border-top-color: transparent;
 }
 
 /* ***************************** FOOTER ****************************** */
