@@ -577,6 +577,7 @@ p {
 
 .page-footer > .container {
   display: flex;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -612,10 +613,6 @@ p {
 
 .footer-left {
   margin-right: 70px;
-}
-
-.footer-right {
-  margin-top: 12px;
 }
 
 .adv-title {
