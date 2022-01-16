@@ -13,6 +13,7 @@
   --bottom-block-color: #eeeeee;
   --svg-main-color: #afb1b8;
   --svg-bcg-footer: rgba(255, 255, 255, 0.1);
+  --animation-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 body {
@@ -103,6 +104,8 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color var(--animation-timing-function);
 }
 
 /* .site-nav .item + .item {
@@ -119,6 +122,21 @@ p {
 }
 .site-nav .nav-link.current {
   color: var(--accent-color);
+}
+
+.site-nav .nav-link {
+  position: relative;
+}
+
+.site-nav .nav-link.current::after {
+  content: '';
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 /* head contacts */
@@ -140,6 +158,8 @@ p {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color var(--animation-timing-function);
 }
 .head-contacts .head-contact:hover,
 .head-contacts .head-contact:focus {
@@ -151,6 +171,8 @@ p {
   align-items: center;
   fill: var(--primary-text-color);
   margin-right: 10px;
+
+  transition: fill var(--animation-timing-function);
 }
 
 .head-contacts .head-contact:hover .header-svg,
@@ -207,11 +229,70 @@ p {
   cursor: pointer;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--animation-timing-function);
 }
 
 .button-main:hover,
 .button-main:focus {
   background-color: var(--button-focus-color);
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  
+  opacity: 1;
+  transition: opacity var(--animation-timing-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  min-width: 528px;
+  min-height: 581px;
+
+  background-color: var(--white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform var(--animation-timing-function);
+}
+
+.button-modal-close {
+  position: absolute;
+  top: 8px;
+  padding: 0;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.close-svg {
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
 }
 
 /* section & section title */
@@ -313,6 +394,31 @@ p {
   margin-bottom: 0;
 }
 
+.professions > li {
+  position: relative;
+}
+
+.professions-description {
+  position: absolute;
+  bottom: 3px;
+  margin: 0;
+  padding: 0;
+  height: 70px;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+}
+
+.professions-description > h3 {
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
 /* team */
 
 .workers {
@@ -382,7 +488,10 @@ p {
   height: 44px;
   margin-right: 10px;
   border-radius: 50%;
+
+  transition: background-color var(--animation-timing-function);
 }
+
 .sm-link > a {
   padding: 0;
   margin: 0;
@@ -397,6 +506,9 @@ p {
   margin: 12px;
   fill: var(--svg-main-color);
   background-color: var(--white-color);
+
+  transition: background-color var(--animation-timing-function),
+    fill var(--animation-timing-function);
 }
 
 .sm-link:hover .sm-svg,
@@ -427,6 +539,9 @@ p {
   border: 1px solid var(--svg-main-color);
   /* box-sizing: border-box; */
   border-radius: 4px;
+
+  transition: fill var(--animation-timing-function),
+    border-color var(--animation-timing-function);
 }
 
 .client:not(:last-child) {
@@ -472,6 +587,10 @@ p {
   cursor: pointer;
   border-radius: 4px;
   border-color: transparent;
+
+  transition: color var(--animation-timing-function),
+    background-color var(--animation-timing-function),
+    box-shadow 250ms var(--animation-timing-function);
 }
 
 .filter-element:last-child {
@@ -499,9 +618,8 @@ p {
 }
 
 .element {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    cursor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .element:hover,
@@ -510,12 +628,6 @@ p {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
 }
-
-/* .element {
-  width: 370px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-} */
 
 .element:nth-child(3n) {
   margin-right: 0;
@@ -533,6 +645,68 @@ p {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.element {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.element .project-description {
+  transform: translateY(100%);
+  transition: opacity var(--animation-timing-function),
+  transform var(--animation-timing-function);
+}
+
+.element:hover .project-description,
+.element:focus .project-description {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+.top-part {
+  position: relative;
+  overflow: hidden;
+}
+
+.top-part::before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.element .top-part::before {
+  transform: translateY(100%);
+  transition: opacity var(--animation-timing-function), transform var(--animation-timing-function);
+}
+
+.element:hover .top-part::before,
+.element:focus .top-part::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.project-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+
+  margin: 0;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white-color);
 }
 
 .project-title {
@@ -604,6 +778,10 @@ p {
   color: var(--white-color);
 }
 
+.page-footer .footer-contact {
+  transition: color var(--animation-timing-function);
+}
+
 .page-footer .footer-contact:hover,
 .page-footer .footer-contact:focus {
   color: var(--accent-color);
@@ -640,6 +818,9 @@ p {
   margin-right: 10px;
   border-radius: 50%;
   background-color: var(--svg-bcg-footer);
+
+  transition: background-color var(--animation-timing-function);
+}
 }
 .footer-adv > a {
   padding: 0;
