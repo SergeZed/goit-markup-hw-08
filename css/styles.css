@@ -13,6 +13,8 @@
   --bottom-block-color: #eeeeee;
   --svg-main-color: #afb1b8;
   --svg-bcg-footer: rgba(255, 255, 255, 0.1);
+  --submit-focus-color: #188ce8;
+
   --animation-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -288,12 +290,158 @@ p {
   border-radius: 50%;
   border: none;
   /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  transition: fill var(--animation-timing-function);
+}
+
+.button-modal-close:hover,
+.button-modal-close:focus {
+  fill: var(--accent-color);
 }
 
 .close-svg {
   margin: 0;
   padding: 0;
   border-radius: 50%;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--title-head-color);
+  padding: 0;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.modal-user-form textarea {
+  resize: none;
+}
+
+.modal-user-form {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 0px;
+  padding-top: 0;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.form-list {
+  margin-bottom: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+.form-input {
+  margin: 0;
+  padding-left: 42px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 12px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.form-field input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-svg {
+  position: absolute;
+  top: 29px;
+  left: 12px;
+}
+
+.form-field:focus .modal-svg,
+.form-field:hover .modal-svg {
+  fill: var(--accent-color);
+}
+
+.form-input.comment {
+  height: 120px;
+}
+
+.comment {
+  padding: 12px 16px;
+}
+
+.agreement {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.agreement input {
+  height: 15px;
+  width: 16px;
+}
+
+.agreement label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin: 0;
+  padding-left: 7px;
+}
+
+.agreement .label a {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.submit-button {
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px auto;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--animation-timing-function);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--submit-focus-color);
 }
 
 /* section & section title */
@@ -800,7 +948,8 @@ p {
   margin-right: 70px;
 }
 
-.adv-title {
+.adv-title,
+.signup-title {
   display: flex;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -848,4 +997,74 @@ p {
 .footer-adv:hover,
 .footer-adv:focus {
   background-color: var(--accent-color);
+}
+
+.footer-signup {
+  margin-left: 93px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.signup-input {
+  min-width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--footer-contacts-color);
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+
+.signup-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--footer-contacts-color);
+}
+
+.signup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px auto;
+  margin-left: 12px;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--animation-timing-function);
+}
+
+.signup-button:hover,
+.signup-button:focus {
+  background-color: var(--submit-focus-color);
+}
+
+.signup-svg {
+  margin-left: 10px;
 }

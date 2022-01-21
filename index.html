@@ -67,6 +67,49 @@
                 <use href="./images/symbol-defs.svg#icon-close"></use>
               </svg>
             </button>
+            <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+            <form class="modal-user-form">
+              <ul class="form-list list">
+                <li class="form-field">
+                  <label for="name">Имя</label>
+                  <svg class="modal-svg" width="18" height="18">
+                    <use href="./images/icons.svg#icon-icon_person"></use>
+                  </svg>
+                  <input type="text" name="user-name" id="name" class="form-input" />
+                </li>
+                <li class="form-field">
+                  <label for="tel">Телефон</label>
+                  <svg class="modal-svg" width="18" height="18">
+                    <use href="./images/icons.svg#icon-icon_phone"></use>
+                  </svg>
+                  <input type="tel" name="tel" id="tel" class="form-input" />
+                </li>
+                <li class="form-field">
+                  <label for="mail">Почта</label>
+                  <svg class="modal-svg" width="18" height="18">
+                    <use href="./images/icons.svg#icon-icon_email"></use>
+                  </svg>
+                  <input type="email" name="mail" id="mail" class="form-input" />
+                </li>
+                <li class="form-field">
+                  <label for="comment">Комментарий</label>
+                  <textarea
+                    class="form-input comment"
+                    name="comment"
+                    id="comment"
+                    rows="10"
+                    placeholder="Введите текст"
+                  ></textarea>
+                </li>
+              </ul>
+              <div class="form-field agreement">
+                <input type="checkbox" name="agreement" value="agreed" id="agreement" />
+                <label for="agreement"
+                  >Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a>
+                </label>
+              </div>
+            </form>
+            <button type="submit" class="submit-button">Отправить</button>
           </div>
         </div>
       </section>
@@ -407,6 +450,18 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-signup">
+          <h2 class="signup-title">Подпишитесь на рассылку</h2>
+          <form class="signup-form">
+            <input type="email" name="mail" id="mail" placeholder="E-mail" class="signup-input" />
+            <button type="submit" class="signup-button">
+              Подписаться
+              <svg class="signup-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon_send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
