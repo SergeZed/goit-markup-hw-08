@@ -427,6 +427,7 @@ p {
 
 .agreement input:checked + .icon {
   background-image: url('../images/icon_check.svg');
+  /* background-image: url('../images/icons.svg#icon-icon_check'); */
   fill: var(--accent-color);
 }
 
