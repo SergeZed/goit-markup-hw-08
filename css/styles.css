@@ -357,6 +357,11 @@ p {
   border-radius: 4px;
 }
 
+.form-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
 .form-field label {
   margin-bottom: 4px;
 
@@ -377,10 +382,11 @@ p {
   position: absolute;
   top: 29px;
   left: 12px;
+
+  transition: fill var(--animation-timing-function);
 }
 
-.form-field:focus .modal-svg,
-.form-field:hover .modal-svg {
+.form-input:focus ~ .modal-svg {
   fill: var(--accent-color);
 }
 
@@ -397,11 +403,31 @@ p {
   align-items: center;
   justify-content: center;
   margin-bottom: 0;
+  position: relative;
+}
+
+.agreement .icon {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  transition: transform var(--animation-timing-function), fill var(--animation-timing-function);
 }
 
 .agreement input {
   height: 15px;
   width: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.agreement input:checked + .icon {
+  background-image: url('../images/icon_check.svg');
+  fill: var(--accent-color);
 }
 
 .agreement label {
