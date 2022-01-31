@@ -1,0 +1,234 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+
+  opacity: 1;
+  transition: opacity $animation-timing-function;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    & .modal {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform $animation-timing-function;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 8px;
+  padding: 0;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  transition: fill $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.modal__close-svg {
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  color: var(--title-head-color);
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.modal__user-form {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: left;
+
+  & textarea {
+    resize: none;
+  }
+}
+
+.modal__form-list {
+  @extend %list;
+  margin-bottom: 20px;
+}
+
+.modal__form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal__form-input {
+  margin: 0;
+  padding-left: 42px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 12px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal__label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $primary-text-color;
+}
+
+.modal__modal-svg {
+  position: absolute;
+  top: 29px;
+  left: 12px;
+
+  transition: fill $animation-timing-function;
+
+  .modal__form-input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+.modal__comment {
+  padding: 12px 16px;
+}
+
+.modal__form-input.modal__comment {
+  height: 120px;
+}
+
+.modal__agreement {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.modal__icon {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  top: 50%;
+  left: 14 px;
+  transform: translateY(-50%);
+  pointer-events: none;
+
+  transition: transform $animation-timing-function, fill $animation-timing-function;
+}
+
+.modal__input {
+  height: 15px;
+  width: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal__input:checked + .modal__icon {
+  background-image: url('../../../images/icon_check.svg');
+  //   /* background-image: url('../images/icons.svg#icon-icon_check'); */
+  fill: $accent-color;
+}
+
+.modal__agreement-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+  margin: 0;
+  padding-left: 7px;
+}
+
+.modal__agreement-conditions {
+  text-decoration-line: underline;
+  color: $accent-color;
+}
+
+.modal__submit-button {
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px auto;
+
+  color: $white-color;
+  background-color: $accent-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $submit-focus-color;
+  }
+}

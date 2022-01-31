@@ -1,0 +1,175 @@
+.page-footer {
+  background-color: $foter-bcg-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.page-footer__container {
+  @extend %container;
+  display: flex;
+  align-items: baseline;
+}
+
+.logo--footer {
+  display: block;
+  margin-bottom: 20px;
+
+  color: $white-color;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+
+.page-footer__contact-li:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+// /* .footer-contact-li:last-child {
+//   margin-bottom: 0;
+// } */
+
+.page-footer__contact {
+  color: $footer-contacts-color;
+  font-style: normal;
+  line-height: 1.71;
+  text-decoration: none;
+
+  transition: color $animation-timing-function;
+
+  &--white {
+    color: $white-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+/* right part of the footer */
+
+.page-footer__left-part {
+  margin-right: 70px;
+}
+
+.page-footer__title {
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: $white-color;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.page-footer__advs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto 30px auto;
+  padding: 0;
+}
+
+.page-footer__adv {
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: $svg-bcg-footer;
+
+  transition: background-color $animation-timing-function;
+
+  & > a {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.page-footer__svg {
+  margin: 12px;
+  fill: $white-color;
+  //   /* background-color: var(--white-color); */
+}
+
+.page-footer__signup {
+  margin-left: auto;
+}
+
+.page-footer__signup-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.page-footer__signup-input {
+  min-width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: $footer-contacts-color;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: $footer-contacts-color;
+  }
+}
+
+.page-footer__signup-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px auto;
+  margin-left: 12px;
+
+  color: $white-color;
+  background-color: $accent-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.86;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: $submit-focus-color;
+  }
+}
+
+.page-footer__signup-svg {
+  margin-left: 10px;
+}

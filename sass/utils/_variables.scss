@@ -1,0 +1,25 @@
+$primary-text-color: #757575;
+$title-head-color: #212121;
+$accent-color: #2196f3;
+$white-color: #ffffff;
+$foter-bcg-color: #2f303a;
+$footer-contacts-color: rgba(255, 255, 255, 0.6);
+$primary-bcg-color: #e5e5e5;
+$secondary-bcg-color: #f5f4fa;
+$main-hero-bcg-color: #2f303a;
+$button-focus-color: #0362af;
+$header-line-color: #ececec;
+$bottom-block-color: #eeeeee;
+$svg-main-color: #afb1b8;
+$svg-bcg-footer: rgba(255, 255, 255, 0.1);
+$submit-focus-color: #188ce8;
+
+$animation-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+body {
+  color: var(--title-head-color);
+  background-color: var(--white-color);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+}
