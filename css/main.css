@@ -450,7 +450,7 @@ p {
 }
 
 .modal__input:checked + .modal__icon {
-  background-image: url("../../../images/icon_check.svg");
+  background-image: url("../images/icon_check.svg");
   fill: #2196f3;
 }
 
