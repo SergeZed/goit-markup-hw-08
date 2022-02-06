@@ -1,9 +1,14 @@
 .section-portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   & .section-title {
     @extend %visually-hidden;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -11,16 +16,29 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .filters__filter-element {
   margin-right: 8px;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-right: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
   }
 }
 

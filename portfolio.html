@@ -22,18 +22,25 @@
     <!--Header-->
     <header class="page-header">
       <div class="container page-header__container">
+        <a href="./index.html" class="logo"><span class="logo__logo-part">Web</span>Studio</a>
+        <button type="button" class="page-header__nav-button">
+          <svg class="page-header__button-svg" width="24" height="16">
+            <use href="./images/symbol-defs.svg#icon-menu_mobile"></use>
+          </svg>
+        </button>
+
+        <!-- <form class="page-header__nav-form"
+        ></form> -->
+
         <nav class="page-header__main-nav">
-          <a href="./index.html" class="logo"><span class="logo__logo-part">Web</span>Studio</a>
           <ul class="page-header__site-nav list">
             <li class="page-header__item">
-              <a href="./index.html" class="page-header__nav-link">Студия</a>
+              <a href="./index.html" class="page-header__nav-link page-header__nav-link--current"
+                >Студия</a
+              >
             </li>
             <li class="page-header__item">
-              <a
-                href="./portfolio.html"
-                class="page-header__nav-link page-header__nav-link--current"
-                >Портфолио</a
-              >
+              <a href="./portfolio.html" class="page-header__nav-link">Портфолио</a>
             </li>
             <li class="page-header__item"><a href="" class="page-header__nav-link">Контакты</a></li>
           </ul>
@@ -282,62 +289,66 @@
     <!--Footer-->
     <footer class="page-footer">
       <div class="container page-footer__container">
-        <div class="page-footer__left-part">
-          <a href="./index.html" class="logo logo--footer"
-            ><span class="logo__logo-part">Web</span>Studio</a
-          >
-          <address>
-            <ul class="page-footer__contacts list">
-              <li class="page-footer__contact-li">
-                <a
-                  href="https://goo.gl/maps/Dpnk7Ew6YdxwagZr8"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="page-footer__contact page-footer__contact--white"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="page-footer__leftnright-parts">
+          <div class="page-footer__left-part">
+            <a href="./index.html" class="logo logo--footer"
+              ><span class="logo__logo-part">Web</span>Studio</a
+            >
+            <address>
+              <ul class="page-footer__contacts list">
+                <li class="page-footer__contact-li">
+                  <a
+                    href="https://goo.gl/maps/Dpnk7Ew6YdxwagZr8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="page-footer__contact page-footer__contact--white"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="page-footer__contact-li">
+                  <a href="mailto:info@example.com" class="page-footer__contact"
+                    >info@example.com
+                  </a>
+                </li>
+                <li class="page-footer__contact-li">
+                  <a href="tel:+380991111111" class="page-footer__contact">+38 099 111 11 11 </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="page-footer__right-part">
+            <h2 class="page-footer__title">Присоединяйтесь</h2>
+            <ul class="page-footer__advs list">
+              <li class="page-footer__adv">
+                <a href="">
+                  <svg class="page-footer__svg" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="page-footer__contact-li">
-                <a href="mailto:info@example.com" class="page-footer__contact">info@example.com </a>
+              <li class="page-footer__adv">
+                <a href="">
+                  <svg class="page-footer__svg" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="page-footer__contact-li">
-                <a href="tel:+380991111111" class="page-footer__contact">+38 099 111 11 11 </a>
+              <li class="page-footer__adv">
+                <a href="">
+                  <svg class="page-footer__svg" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="page-footer__adv">
+                <a href="">
+                  <svg class="page-footer__svg" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="page-footer__right-part">
-          <h2 class="page-footer__title">Присоединяйтесь</h2>
-          <ul class="page-footer__advs list">
-            <li class="page-footer__adv">
-              <a href="">
-                <svg class="page-footer__svg" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__adv">
-              <a href="">
-                <svg class="page-footer__svg" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__adv">
-              <a href="">
-                <svg class="page-footer__svg" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page-footer__adv">
-              <a href="">
-                <svg class="page-footer__svg" width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="page-footer__signup">
           <h2 class="page-footer__title">Подпишитесь на рассылку</h2>
@@ -345,7 +356,7 @@
             <input
               type="email"
               name="mail"
-              id="mail"
+              id="mail-signup"
               placeholder="E-mail"
               class="page-footer__signup-input"
             />

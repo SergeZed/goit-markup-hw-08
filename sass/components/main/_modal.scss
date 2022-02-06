@@ -26,8 +26,9 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  min-width: 450px;
+  min-height: 609px;
   padding: 40px;
 
   background-color: $white-color;
@@ -36,6 +37,11 @@
   border-radius: 4px;
 
   transition: transform $animation-timing-function;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__button-close {
@@ -66,12 +72,16 @@
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--title-head-color);
   padding: 0;
   margin-top: 0;
   margin-bottom: 12px;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }
 
 .modal__user-form {
@@ -120,9 +130,14 @@
 
   &::placeholder {
     font-size: 14px;
-    line-height: 1.17;
+    line-height: 1.14;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+
+    @media screen and (min-width: $desktop) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
   }
 }
 
@@ -163,16 +178,41 @@
   position: relative;
 }
 
+.modal__agreement-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: $primary-text-color;
+  margin: 0;
+  padding-left: 8px;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+    padding-left: 7px;
+  }
+}
+
+.modal__agreement-conditions {
+  text-decoration-line: underline;
+  color: $accent-color;
+}
+
 .modal__icon {
   position: absolute;
   width: 16px;
   height: 15px;
   top: 50%;
-  left: 14 px;
+  left: 1px;
   transform: translateY(-50%);
   pointer-events: none;
+  margin-right: 7px;
 
   transition: transform $animation-timing-function, fill $animation-timing-function;
+
+  @media screen and (min-width: $desktop) {
+    left: 9px;
+  }
 }
 
 .modal__input {
@@ -191,20 +231,6 @@
   background-image: url('../images/icon_check.svg');
   //   /* background-image: url('../images/icons.svg#icon-icon_check'); */
   fill: $accent-color;
-}
-
-.modal__agreement-label {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $primary-text-color;
-  margin: 0;
-  padding-left: 7px;
-}
-
-.modal__agreement-conditions {
-  text-decoration-line: underline;
-  color: $accent-color;
 }
 
 .modal__submit-button {

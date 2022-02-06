@@ -33,6 +33,25 @@
   // }
 }
 
+.page-header__nav-button {
+  border: none;
+  background-color: transparent;
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
+
+  transition: fill $animation-timing-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (max-width: $tablet-1) {
+    display: flex;
+  }
+}
+
 .page-header__main-nav {
   display: none;
   align-items: center;
