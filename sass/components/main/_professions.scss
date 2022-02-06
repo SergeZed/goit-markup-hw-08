@@ -1,6 +1,11 @@
 .section-profession {
   padding-top: 94px;
   padding-bottom: 94px;
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
 
 .section-profession__title {

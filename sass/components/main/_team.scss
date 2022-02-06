@@ -2,8 +2,13 @@
   background-color: $secondary-bcg-color;
   margin-top: 0px;
   margin-bottom: 0px;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-workers__title {
@@ -11,14 +16,29 @@
   margin-bottom: 50px;
   color: $title-head-color;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .section-workers__team-members {
   @extend %list;
-  display: flex;
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 0px;
+  }
 }
 
 .section-workers__member-element {
@@ -27,16 +47,42 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
+  text-align: center;
+
   &:not(:last-child) {
-    width: calc((100% - 90px) / 4);
-    margin-right: 30px;
     margin-bottom: 30px;
   }
-  &:nth-child(4n) {
-    margin-right: 0;
+
+  &:nth-last-child(-n + 2) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 15px;
+    }
   }
-  &:nth-last-child(-n + 4) {
-    margin-bottom: 0;
+
+  @media screen and (max-width: $tablet-1) {
+    padding-bottom: 24px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 90px) / 4);
+    margin-left: 0;
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 15px;
+    }
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n + 4) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -52,6 +98,7 @@
 .section-workers__image {
   margin-top: 0px;
   margin-bottom: 30px;
+  width: 100%;
 }
 
 .section-workers__meta {
@@ -67,8 +114,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px auto 30px auto;
+  margin: 0px auto 0px auto;
   padding: 0;
+
+  @media screen and (min-width: $tablet) {
+    margin: 0px auto 24px auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin: 0px auto 30px auto;
+  }
 }
 
 .section-workers__sm-link {
