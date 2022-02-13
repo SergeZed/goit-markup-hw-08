@@ -229,19 +229,37 @@
           <h2 class="section-profession__title">Чем мы занимаемся</h2>
           <ul class="section-profession__professions list">
             <li class="section-profession__item">
-              <img src="./images/laptop1.jpg" alt="планшет и клавиатура" width="370" />
+              <img
+                srcset="./images/adj/keyboard.jpg 370w, ./images/adj/keyboard_2x.jpg 740w"
+                src="./images/adj/keyboard.jpg"
+                alt="планшет и клавиатура"
+                width="370"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+              />
               <div class="section-profession__professions-description">
                 <h3 class="section-profession__meta">Десктопные приложения</h3>
               </div>
             </li>
             <li class="section-profession__item">
-              <img src="./images/laptop2.jpg" alt="ноутбук" width="370" />
+              <img
+                srcset="./images/adj/laptop_main.jpg 370w, ./images/adj/laptop_main_2x.jpg 740w"
+                src="./images/adj/laptop_main.jpg"
+                alt="ноутбук"
+                width="370"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+              />
               <div class="section-profession__professions-description">
                 <h3 class="section-profession__meta">Мобильные приложения</h3>
               </div>
             </li>
             <li class="section-profession__item">
-              <img src="./images/laptop3.jpg" alt="планшет" width="370" />
+              <img
+                srcset="./images/adj/tablet.jpg 370w, ./images/adj/tablet_2x.jpg 740w"
+                src="./images/adj/tablet.jpg"
+                alt="планшет"
+                width="370"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
+              />
               <div class="section-profession__professions-description">
                 <h3 class="section-profession__meta">Дизайнерские решения</h3>
               </div>
@@ -256,12 +274,29 @@
           <h2 class="section-workers__title">Наша команда</h2>
           <ul class="section-workers__team-members list">
             <li class="section-workers__member-element">
-              <img
-                class="section-workers__image"
-                src="./images/team1.jpg"
-                alt="команда Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/adj/team-1_m_1x.jpg 1x, ./images/adj/team-1_m_2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-1_d_1x.jpg 1x, ./images/adj/team-1_d_2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-1_t_1x.jpg 1x, ./images/adj/team-1_t_2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="section-workers__image"
+                  src="./images/adj/team-1_m_1x.jpg"
+                  alt="команда Игорь Демьяненко"
+                  width="270"
+                />
+              </picture>
               <h3 class="section-workers__member">Игорь Демьяненко</h3>
               <p class="section-workers__meta" lang="en">Product Designer</p>
               <ul class="section-workers__sm-links list">
@@ -296,12 +331,29 @@
               </ul>
             </li>
             <li class="section-workers__member-element">
-              <img
-                class="section-workers__image"
-                src="./images/team2.jpg"
-                alt="команда Ольга Репина"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/adj/team-2_m_1x.jpg 1x, ./images/adj/team-2_m_2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-2_d_1x.jpg 1x, ./images/adj/team-2_d_2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-2_t_1x.jpg 1x, ./images/adj/team-2_t_2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="section-workers__image"
+                  src="./images/adj/team-2_m_1x.jpg"
+                  alt="команда Ольга Репина"
+                  width="270"
+                />
+              </picture>
               <h3 class="section-workers__member">Ольга Репина</h3>
               <p class="section-workers__meta" lang="en">Frontend Developer</p>
               <ul class="section-workers__sm-links list">
@@ -336,12 +388,29 @@
               </ul>
             </li>
             <li class="section-workers__member-element">
-              <img
-                class="section-workers__image"
-                src="./images/team3.jpg"
-                alt="команда Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/adj/team-3_m_1x.jpg 1x, ./images/adj/team-3_m_2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-3_d_1x.jpg 1x, ./images/adj/team-3_d_2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-3_t_1x.jpg 1x, ./images/adj/team-3_t_2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="section-workers__image"
+                  src="./images/adj/team-3_m_1x.jpg"
+                  alt="команда Николай Тарасов"
+                  width="270"
+                />
+              </picture>
               <h3 class="section-workers__member">Николай Тарасов</h3>
               <p class="section-workers__meta" lang="en">Marketing</p>
               <ul class="section-workers__sm-links list">
@@ -376,12 +445,29 @@
               </ul>
             </li>
             <li class="section-workers__member-element">
-              <img
-                class="section-workers__image"
-                src="./images/team4.jpg"
-                alt="команда Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="./images/adj/team-4_m_1x.jpg 1x, ./images/adj/team-4_m_2x.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-4_d_1x.jpg 1x, ./images/adj/team-4_d_2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="./images/adj/team-4_t_1x.jpg 1x, ./images/adj/team-4_t_2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  class="section-workers__image"
+                  src="./images/adj/team-4_m_1x.jpg"
+                  alt="команда Михаил Ермаков"
+                  width="270"
+                />
+              </picture>
               <h3 class="section-workers__member">Михаил Ермаков</h3>
               <p class="section-workers__meta" lang="en">UI Designer</p>
               <ul class="section-workers__sm-links list">

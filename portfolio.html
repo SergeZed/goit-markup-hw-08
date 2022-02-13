@@ -107,7 +107,6 @@
           <h1 class="section-title visually-hidden">Наши проекты</h1>
 
           <!--Filters-->
-
           <ul class="filters list">
             <li class="filters__filter-element">
               <button type="button" class="filters__filter filters__filter">Все</button>
@@ -125,17 +124,35 @@
               <button type="button" class="filters__filter">Маркетинг</button>
             </li>
           </ul>
+
           <!--Our projects-->
           <ul class="projects list">
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project1.jpg"
-                    alt="ноут с портфолио"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/adj/tech_m_1x.jpg 1x, ./images/adj/tech_m_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/tech_d_1x.jpg 1x, ./images/adj/tech_d_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/tech_t_1x.jpg 1x, ./images/adj/tech_t_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/tech_t_1x.jpg"
+                      alt="ноут с портфолио"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -151,12 +168,38 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project2.jpg"
-                    alt="2 игрока в баскетбол"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adj/new-orlean_m_1x.jpg 1x,
+                        ./images/adj/new-orlean_m_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/adj/new-orlean_d_1x.jpg 1x,
+                        ./images/adj/new-orlean_d_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/adj/new-orlean_t_1x.jpg 1x,
+                        ./images/adj/new-orlean_t_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/new-orlean_t_1x.jpg"
+                      alt="2 игрока в баскетбол"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
@@ -173,12 +216,29 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project3.jpg"
-                    alt="лого рыбного ресторана"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/adj/fish_m_1x.jpg 1x, ./images/adj/fish_m_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/fish_d_1x.jpg 1x, ./images/adj/fish_d_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/fish_t_1x.jpg 1x, ./images/adj/fish_t_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/fish_t_1x.jpg"
+                      alt="лого рыбного ресторана"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
@@ -193,12 +253,38 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project4.jpg"
-                    alt="наушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adj/headphones_m_1x.jpg 1x,
+                        ./images/adj/headphones_m_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/adj/headphones_d_1x.jpg 1x,
+                        ./images/adj/headphones_d_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/adj/headphones_t_1x.jpg 1x,
+                        ./images/adj/headphones_t_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/headphones_t_1x.jpg"
+                      alt="наушники"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
@@ -213,12 +299,29 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project5.jpg"
-                    alt="2 коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/adj/boxes_m_1x.jpg 1x, ./images/adj/boxes_m_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/boxes_d_1x.jpg 1x, ./images/adj/boxes_d_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/boxes_t_1x.jpg 1x, ./images/adj/boxes_t_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/boxes_t_1x.jpg"
+                      alt="2 коробки"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
@@ -233,12 +336,29 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project6.jpg"
-                    alt="монитор эпл"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/adj/mac_m_1x.jpg 1x, ./images/adj/mac_m_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/mac_d_1x.jpg 1x, ./images/adj/mac_d_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/mac_t_1x.jpg 1x, ./images/adj/mac_t_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/mac_t_1x.jpg"
+                      alt="монитор эпл"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
@@ -255,12 +375,29 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project7.jpg"
-                    alt="открытый журнал"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/adj/book_m_1x.jpg 1x, ./images/adj/book_m_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/book_d_1x.jpg 1x, ./images/adj/book_d_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/book_t_1x.jpg 1x, ./images/adj/book_t_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/book_t_1x.jpg"
+                      alt="открытый журнал"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
@@ -277,12 +414,29 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project8.jpg"
-                    alt="бирка"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/adj/tag_m_1x.jpg 1x, ./images/adj/tag_m_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/tag_d_1x.jpg 1x, ./images/adj/tag_d_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="./images/adj/tag_t_1x.jpg 1x, ./images/adj/tag_t_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/tag_t_1x.jpg"
+                      alt="бирка"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
@@ -297,12 +451,38 @@
             <li class="projects__element">
               <a href="" class="projects__project-example">
                 <div class="projects__top-part">
-                  <img
-                    class="projects__project-image"
-                    src="./images/project9.jpg"
-                    alt="работа за ноутбуком"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adj/laptop_portfolio_m_1x.jpg 1x,
+                        ./images/adj/laptop_portfolio_m_2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/adj/laptop_portfolio_d_1x.jpg 1x,
+                        ./images/adj/laptop_portfolio_d_2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/adj/laptop_portfolio_t_1x.jpg 1x,
+                        ./images/adj/laptop_portfolio_t_2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="projects__project-image"
+                      src="./images/adj/laptop_portfolio_t_1x.jpg"
+                      alt="работа за ноутбуком"
+                      width="370"
+                    />
+                  </picture>
                   <p class="projects__project-description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero excepturi quidem
                     eligendi velit quo accusantium illo asperiores. Illum, officia consequuntur.
