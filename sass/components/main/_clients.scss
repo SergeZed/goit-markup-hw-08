@@ -38,25 +38,20 @@
   }
 }
 
-.section-clients__client-svg {
-  fill: $svg-main-color;
-  padding: 16px 32px;
-  border: 1px solid $svg-main-color;
-  /* box-sizing: border-box; */
-  border-radius: 4px;
-
-  transition: fill $animation-timing-function, border-color $animation-timing-function;
-
-  .section-clients__client:hover &,
-  .section-clients__client:focus & {
-    fill: $accent-color;
-    border-color: $accent-color;
-  }
-}
-
 .section-clients__client {
   width: calc((100% - 2 * 30px) / 2);
   margin: 15px;
+  height: 92px;
+  display: inline-block;
+
+  border: 1px solid $svg-main-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
 
   @media screen and (min-width: $tablet) {
     width: calc((100% - 3 * 30px) / 3);
@@ -65,14 +60,38 @@
   @media screen and (min-width: $desktop) {
     width: auto;
     margin: 0;
+    width: calc((100% - 150px) / 6);
 
     &:not(:last-child) {
-      width: calc((100% - 150px) / 6);
       margin-right: 30px;
     }
 
     :nth-child(6n) {
       margin-right: 0;
     }
+  }
+}
+
+.section-clients__link {
+  display: inline-block;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+  transition: border-color $animation-timing-function;
+}
+
+.section-clients__client-svg {
+  fill: $svg-main-color;
+  height: 60px;
+  width: 106px;
+  padding: 0;
+  margin: auto;
+
+  transition: fill $animation-timing-function, border-color $animation-timing-function;
+
+  .section-clients__client:hover &,
+  .section-clients__client:focus & {
+    fill: $accent-color;
   }
 }
