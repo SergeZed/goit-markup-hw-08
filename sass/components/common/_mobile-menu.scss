@@ -7,12 +7,19 @@
   margin-right: 10px;
   padding: 0;
   z-index: 10;
+  position: absolute;
+  right: 10px;
 
   transition: fill $animation-timing-function;
 
   &:hover,
   &:focus {
     fill: $accent-color;
+  }
+
+  &.is-open {
+    position: fixed;
+    right: 10px;
   }
 
   @media screen and (min-width: $tablet) {
@@ -41,11 +48,11 @@
 
   @media screen and (max-width: $tablet-1) {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
+    height: 100vh;
     z-index: 9;
 
     &.is-open {
